@@ -9,7 +9,10 @@
 </head>
 <body>
     <section class="container">
-        <canvas></canvas>
+        <canvas id="telaPintura" width="500" height= "500"></canvas>
+        <div class="pincel-container">
+            <input type="range" id="tamanhoPincel" min="1" max="100" value="10">
+        </div>
         <div class="paleta-container">
             <section class="paleta-cores">
                 <button class="button__cor" data-cor="#111111" title="Preto">
@@ -77,6 +80,7 @@
         </div>
     </section>
     <script src="./script/script.js"></script>
+    <script src="./script/canvas.js"></script>
 </body>
 </html>
 

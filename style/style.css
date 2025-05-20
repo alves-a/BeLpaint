@@ -2,8 +2,13 @@
     background-color: #fefefe;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 20px;
     min-height: 100vh;
     margin: 0;
     font-family: sans-serif;
+  }
+
+  canvas{
+    background-color: #fefefe;
   }
