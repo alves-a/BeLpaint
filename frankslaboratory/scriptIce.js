@@ -19,10 +19,10 @@ ctx.shadowOffsetX = 0
 ctx.shadowOffsetY = 10
 ctx.shadowBlur = 10
 ctx.shadowColor = 'rgba(0,0,0,0.5)'
-//ctx.globalCompositeOperation = 'xor'
+ctx.globalCompositeOperation = 'xor'
 //ctx.globalCompositeOperation = 'lighten'
 //ctx.globalCompositeOperation = 'destination'
-ctx.globalCompositeOperation = 'destination-over'
+//ctx.globalCompositeOperation = 'destination-over'
 
 class Root {
     constructor(x,y){
@@ -63,7 +63,7 @@ class Root {
             ctx.lineWidth = 0.1
             ctx.strokeStyle = 'white'
             ctx.strokeRect(0 - triple/2, 0 - triple/2, triple, triple)
-            */
+            //*/
             requestAnimationFrame(this.update.bind(this))
             ctx.restore()
         }
@@ -81,7 +81,7 @@ window.addEventListener('mousemove', function(e){
 
 window.addEventListener('mousedown', function(e){
     drawing = true
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 10; i++) {
         const root = new Root(e.x, e.y)
         root.update()   
     }  
