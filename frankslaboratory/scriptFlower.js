@@ -61,7 +61,7 @@ class Flower {
         this.vs = Math.random() * 0.3 + 0.2
         this.maxFlowerSize = this.size + Math.random() * 50
         this.image = new Image()
-        this.image.src = './src/img/flowers.png'
+        this.image.src = '/src/img/flowers.png'
         this.frameSize = 100
         this.frameX = Math.floor(Math.random() * 3)
         this.frameY = Math.floor(Math.random() * 3)
