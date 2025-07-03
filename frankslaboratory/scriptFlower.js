@@ -13,6 +13,7 @@ canvas.height = window.innerHeight
 
 let drawing = false
 ctx.lineWidth = 0.4
+//ctx.globalCompositeOperation = 'xor'
 //ctx.globalCompositeOperation = 'lighten'
 //ctx.globalCompositeOperation = 'destination'
 //ctx.globalCompositeOperation = 'destination-over'
@@ -65,7 +66,7 @@ class Flower {
         this.frameSize = 100
         this.frameX = Math.floor(Math.random() * 3)
         this.frameY = Math.floor(Math.random() * 3)
-        this.size > 11.5 ? this.willFlower = true : this.willFlower = false
+        this.size > 9.5 ? this.willFlower = true : this.willFlower = false
         this.angle = 0
         this.va = Math.random() * 0.05 - 0.025
     }

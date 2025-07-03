@@ -1,14 +1,192 @@
- body {
+/* style.css */
+
+/* Reset básico para garantir consistência entre navegadores */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e borda na largura/altura */
+    height: 100%; /* Ocupa 100% da altura da viewport */
+    overflow: hidden; /* Evita a barra de rolagem inicial se tudo couber */
+}
+
+body {
     background-color: #fefefe;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    min-height: 100vh;
-    margin: 0;
+    flex-direction: column; /* Organiza header e main em coluna */
     font-family: sans-serif;
-  }
+}
 
-  canvas{
+/* Estilos para o novo header */
+.main-header {
+    height: 5vh; /* 5% da altura da viewport */
+    width: 100%;
+    background-color: #333; /* Cor de fundo para o header */
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; /* Padding horizontal */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    flex-shrink: 0; /* Impede que o header encolha */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Espaço entre título e navegação */
+    align-items: center;
+    width: 100%;
+}
+
+.main-header .titulo {
+    margin: 0;
+    font-size: 1.5em;
+    white-space: nowrap; /* Evita que o título quebre linha */
+}
+
+.main-header nav {
+    display: flex;
+    gap: 15px; /* Espaço entre os botões de navegação */
+}
+
+.header-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Área de conteúdo principal (canvas e paleta) */
+.content-area {
+    flex-grow: 1; /* Permite que esta área ocupe todo o espaço restante */
+    display: flex;
+    justify-content: center; /* Centraliza o .container horizontalmente */
+    align-items: flex-start; /* Alinha o .container no topo da content-area */
+    padding: 20px; /* Padding ao redor de todo o conteúdo */
+    overflow-y: auto; /* Permite rolagem se o conteúdo exceder 95vh */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna: canvas, pincel, paleta, botões */
+    align-items: center; /* Centraliza os itens da coluna horizontalmente */
+    width: 90%; /* Ajuste a largura máxima do container principal se necessário */
+    max-width: 1000px; /* Um limite para telas muito grandes */
+    gap: 20px; /* Espaço entre os elementos dentro do container */
+}
+
+canvas {
     background-color: #fefefe;
-  }
+    width: 70vw; /* Ocupa 70% da largura da viewport */
+    max-width: 700px; /* Limite máximo para o canvas em telas grandes */
+    height: auto; /* Mantém a proporção do canvas com base na largura */
+    border: 1px solid #ccc; /* Borda para visualizar o canvas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pincel-container {
+    width: 70%; /* Ocupa 70% da largura do .container */
+    max-width: 600px; /* Limite máximo para o slider do pincel */
+    text-align: center;
+    padding: 10px 0;
+}
+
+#tamanhoPincel {
+    width: 100%; /* O slider ocupa toda a largura do pincel-container */
+}
+
+/* Os botões FLOWER e ICE */
+.container > div:last-child {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px; /* Espaçamento acima dos botões */
+}
+
+.container > div:last-child button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.container > div:last-child button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Aumenta a largura do container em telas menores */
+    }
+
+    canvas {
+        width: 90vw; /* Canvas ocupa mais largura em telas menores */
+    }
+
+    .pincel-container {
+        width: 90%;
+    }
+
+    /* Ajusta a paleta de cores para telas menores */
+    .paleta-cores {
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+        gap: 8px;
+    }
+
+    .button__cor {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 0 10px;
+    }
+    .header-content {
+        flex-direction: column; /* Empilha título e navegação em telas pequenas */
+        gap: 5px;
+    }
+    .main-header .titulo {
+        font-size: 1.2em;
+    }
+    .main-header nav {
+        gap: 10px;
+    }
+    .header-button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+
+    .content-area {
+        padding: 10px;
+    }
+
+    .container {
+        gap: 15px;
+    }
+
+    canvas {
+        width: 95vw; /* Canvas ainda maior em telas muito pequenas */
+        height: auto; /* Garante que a altura se ajuste à largura */
+    }
+
+    .pincel-container {
+        width: 95%;
+    }
+
+    .button__cor {
+        width: 35px;
+        height: 35px;
+    }
+}

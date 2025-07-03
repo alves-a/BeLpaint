@@ -1,3 +1,7 @@
+// Código referência utilizado do autor 'Manual do Dev'
+// Repositório do projeto:
+// https://github.com/manualdodev/paint
+
 document.addEventListener("DOMContentLoaded", ()=>{
     
     // pegando os elementos do HTML

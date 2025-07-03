@@ -1,0 +1,52 @@
+main {
+    height: 95vh;
+    width: 100%;
+    background-color: red;
+    /* Removido text-align: right; e padding: 2em 0; daqui para controle mais preciso do container */
+    /*background-color: transparent; /* A main pode ter um fundo transparente para o container aparecer */
+    display: flex; /* Usar flexbox para centralizar o container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.main-container {
+    background-color: white; /* Fundo branco para o container */
+    width: 70%; /* 70% da largura da main */
+    /* Você pode definir uma altura mínima ou máxima aqui, se desejar */
+    min-height: 300px; /* Exemplo de altura mínima */
+    padding: 2em; /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centraliza o texto e botões dentro do container */
+    display: flex; /* Para centralizar o conteúdo interno */
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.main-container h2 {
+    margin-bottom: 1.5em; /* Espaço abaixo do título */
+    color: #333;
+}
+
+.botoes-container {
+    display: flex; /* Para colocar os botões lado a lado */
+    gap: 1em; /* Espaço entre os botões */
+    flex-wrap: wrap; /* Permite que os botões quebrem linha se a tela for pequena */
+    justify-content: center; /* Centraliza os botões dentro do container */
+}
+
+.botao {
+    display: inline-block; /* Para que o padding e a largura funcionem */
+    padding: 1em 2em;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}

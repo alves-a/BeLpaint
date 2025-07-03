@@ -8,93 +8,88 @@
     <!--<a href="https://www.flaticon.com/br/icones-gratis/videoblog" title="videoblog ícones">Videoblog ícones criados por Aranagraphics - Flaticon</a>-->
     <link rel="shortcut icon" href="./src/img/favicon.png" type="image/png">
     
-    <link rel="stylesheet" href="./src/style/style.css">
-    <link rel="stylesheet" href="./src/style/paleta_cores.css">
+        <link rel="stylesheet" href="./src/style/header.css">
+        <link rel="stylesheet" href="./src/style/main.css">
+        <link rel="stylesheet" href="./src/style/footer.css">
 </head>
 <body>
     
-    <section class="container">
-        <canvas id="telaPintura" width="500" height= "500"></canvas>
-        <div class="pincel-container">
-            <input type="range" id="tamanhoPincel" min="1" max="100" value="10">
+    <header>
+        <div class="container-titulo">
+            <h1 class="titulo">BeLpaint</h1>
         </div>
-        <div class="paleta-container">
-            <section class="paleta-cores">
-                <button class="button__cor" data-cor="#111111" title="Preto">
-                    <div class="cor-interna" style="background-color: #111111;"></div>
-                </button>
-                <button class="button__cor" data-cor="#808080" title="Cinza">
-                    <div class="cor-interna" style="background-color: #808080;"></div>
-                </button>
-                <button class="button__cor" data-cor="#69310a" title="Marrom">
-                    <div class="cor-interna" style="background-color: #69310a;"></div>
-                </button>
-                <button class="button__cor" data-cor="#F50000" title="Vermelho">
-                    <div class="cor-interna" style="background-color: #F50000;"></div>
-                </button>
-                <button class="button__cor" data-cor="#FF4500" title="Laranja">
-                    <div class="cor-interna" style="background-color: #FF4500;"></div>
-                </button>
-                <button class="button__cor" data-cor="#F5F500" title="Amarelo">
-                    <div class="cor-interna" style="background-color: #F5F500;"></div>
-                </button>
-                
-                <button class="button__cor" data-cor="#008000" title="Verde">
-                    <div class="cor-interna" style="background-color: #008000;"></div>
-                </button>
-                <button class="button__cor" data-cor="#0000CD" title="Azul">
-                    <div class="cor-interna" style="background-color: #0000CD;"></div>
-                </button>
-                <button class="button__cor" data-cor="#8B008B" title="Roxo">
-                    <div class="cor-interna" style="background-color: #8B008B;"></div>
-                </button>
-                <button class="button__cor" data-cor="#FF1493" title="Rosa">
-                    <div class="cor-interna" style="background-color: #FF1493;"></div>
-                </button>
-                <button class="button__cor" data-cor="#F0F0F0" title="Branco">
-                    <div class="cor-interna" style="background-color: #F0F0F0;"></div>
-                </button>
-                <button class="button__cor" data-cor="#C0C0C0" title="Cinza Claro">
-                    <div class="cor-interna" style="background-color: #C0C0C0;"></div>
-                </button>
-                <button class="button__cor" data-cor="#964B00 " title="Marrom Claro">
-                    <div class="cor-interna" style="background-color: #964B00;"></div>
-                </button>
-                <button class="button__cor" data-cor="#FF3D33 " title="Vermelho Claro">
-                    <div class="cor-interna" style="background-color: #FF3D33;"></div>
-                </button>
-                <button class="button__cor" data-cor="#F67828 " title="LAranja Claro">
-                    <div class="cor-interna" style="background-color: #F67828;"></div>
-                </button>
-                <button class="button__cor" data-cor="#FCFC69 " title="Amarelo Claro">
-                    <div class="cor-interna" style="background-color: #FCFC69;"></div>
-                </button>
-                <button class="button__cor" data-cor="#77DD77 " title="Verde Claro">
-                    <div class="cor-interna" style="background-color: #77DD77;"></div>
-                </button>
-                <button class="button__cor" data-cor="#77D4E3 " title="Azul Claro">
-                    <div class="cor-interna" style="background-color: #77D4E3;"></div>
-                </button>
-                <button class="button__cor" data-cor="#DDA0DD " title="Roxo Claro">
-                    <div class="cor-interna" style="background-color: #DDA0DD;"></div>
-                </button>
-                <button class="button__cor" data-cor="#FFB6C1 " title="Rosa Claro">
-                    <div class="cor-interna" style="background-color: #FFB6C1;"></div>
-                </button>
-            </section>
-        </div>
-        <div>
-            <a href="./frankslaboratory/flower.html">
-                <button>FLOWER</button>
-            </a>
-            <a href="./frankslaboratory/ice.html">
-                <button>ICE</button>
-            </a>
-        </div>
-    </section>
-    <script src="./src/script/script.js"></script>
-    <script src="./src/script/canvas.js"></script>
+    </header>
+
+    <main>
+        <section class="main-container">
+            <!-- <h2>Escolha uma Opção</h2> -->
+            
+            <div class="botoes-container" id="main-menu">
+                <button class="botao" id="login-button">Acesso Profesor</button>
+                <a href="./src/pages/canvas.html" class="botao">Arte Livre</a>
+                <a href="./src/pages/vaso.html" class="botao">Ex.1 - Jardim da Vovó</a>
+            </div>
+
+            <div id="login-form" style="display: none;">
+                <!-- <h2>Escolha uma Opção</h2> -->
+                <input type="password" placeholder="Senha de Acesso">
+                <button id="submit-login">Entrar</button>
+                <button id="back-to-menu">Voltar</button>
+                <button id="go-to-register">Cadastrar</button>
+            </div>
+
+            <div id="register-form" style="display: none;">
+                <!-- <h2>Escolha uma Opção</h2> -->
+                <input type="text" placeholder="Nome">
+                <input type="text" placeholder="Sobrenome">
+                <input type="text" placeholder="Escola">
+                <input type="text" placeholder="Cidade">
+                <button id="">Cadastrar</button>
+                <button id="back-to-login">Voltar</button>
+            </div>
+      
+        </section>
+    </main>
+
+    <footer>
+        <p class="copyright"><a href="https://github.com/alves-a/BeLpaint">repository BeLpaint - 2025</a></p>
+        <p class="copyright"><a href="https://github.com/alves-a">created by Afonso Alves</a></p>
+        <p class="copyright"><a href="mailto:belpaint.contato@gmail.com">belpaint.contato@gmail.com</a></p>
+    </footer>
+
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mainMenu = document.getElementById('main-menu');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        const loginButton = document.getElementById('login-button');
+        const backToMenuButton = document.getElementById('back-to-menu');
+        const backToLoginButton = document.getElementById('back-to-login');
+        const goToRegisterButton = document.getElementById('go-to-register');
+
+        loginButton.addEventListener('click', () => {
+            mainMenu.style.display = 'none'; // Esconde o menu
+            loginForm.style.display = 'block'; // Mostra o formulário de login
+        });
+
+        backToMenuButton.addEventListener('click', () => {
+            loginForm.style.display = 'none'; // Esconde o formulário de login
+            mainMenu.style.display = 'block'; // Mostra o menu
+        });
+
+        goToRegisterButton.addEventListener('click', () => {
+            loginForm.style.display = 'none'; // Esconde o formulário de login
+            registerForm.style.display = 'block'; // Mostra o formulário de registro
+        });
+
+        backToLoginButton.addEventListener('click', () => {
+            registerForm.style.display = 'none'; // Esconde o formulário de registro
+            loginForm.style.display = 'block'; // Mostra o o formulário de login
+        });
+    });
+</script>
 </html>
 
 
