@@ -15,10 +15,10 @@ let btnReplay;
 // --- FUNÇÕES ESSENCIAIS DO P5.JS ---
 function preload() {
   const temas = [
-    "./src/img/fase01_cimento.jpg", 
-    "./src/img/fase01_chao.jpg",
-    "./src/img/fase01_cimento2.jpg", 
-    "./src/img/fase01_chao2.jpg"
+    "../src/img/fase01_cimento.jpg", 
+    "../src/img/fase01_chao.jpg",
+    "../src/img/fase01_cimento2.jpg", 
+    "../src/img/fase01_chao2.jpg"
   ];
   const indiceAleatorio = Math.floor(Math.random() * temas.length);
   const urlDaImagemSorteada = temas[indiceAleatorio];
