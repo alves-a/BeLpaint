@@ -1,95 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B&L Paint</title>
+    <title>BeLpaint</title>
 
-    <!--<a href="https://www.flaticon.com/br/icones-gratis/videoblog" title="videoblog ícones">Videoblog ícones criados por Aranagraphics - Flaticon</a>-->
     <link rel="shortcut icon" href="./src/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./src/style/fase01.css">
     
-        <link rel="stylesheet" href="./src/style/header.css">
-        <link rel="stylesheet" href="./src/style/main.css">
-        <link rel="stylesheet" href="./src/style/footer.css">
 </head>
 <body>
+    <h1>Fase 01: Bolinhas de Gude <b style="color: red;">*VERSÃO DE TESTE*</b></h1>
     
-    <header>
-        <div class="container-titulo">
-            <h1 class="titulo">BeLpaint</h1>
-        </div>
-    </header>
+    <div class="descricao-container">
+      <p class="descricao">
+        <b>Modo de jogo:</b> Toque e pinte dentro dos círculos coloridos que representam a figura lúdica de bolinhas de gude. 
+      </p>
+      <p class="descricao">
+        <b>Funcionamento:</b> O sistema calcula a precisão e o erro do jogador. Quando a precisão for maior que 90% em todos os círculos coloridos, o botão "Replay" é disponibilizado, permitindo rever os passos e analisar as dificuldades do jogador. 
+      </p>
+      <p class="descricao">
+        <b>Objetivos:</b> Utilizar figuras geométricas em um aspecto lúdico para avaliar a coordenação motora, o senso de distância, o tamanho entre os formatos (grande e pequeno) e os princípios de contagem (número de bolinhas coloridas). 
+      </p>
+    </div>
 
-    <main>
-        <section class="main-container">
-            <!-- <h2>Escolha uma Opção</h2> -->
-            
-            <div class="botoes-container" id="main-menu">
-                <button class="botao" id="login-button">Acesso Profesor</button>
-                <a href="./src/pages/canvas.html" class="botao">Arte Livre</a>
-                <a href="./src/pages/vaso.html" class="botao">Ex.1 - Jardim da Vovó</a>
-            </div>
+    <div id="canvas-container"></div>
+    <div id="resultado"></div>
 
-            <div id="login-form" style="display: none;">
-                <!-- <h2>Escolha uma Opção</h2> -->
-                <input type="password" placeholder="Senha de Acesso">
-                <button id="submit-login">Entrar</button>
-                <button id="back-to-menu">Voltar</button>
-                <button id="go-to-register">Cadastrar</button>
-            </div>
-
-            <div id="register-form" style="display: none;">
-                <!-- <h2>Escolha uma Opção</h2> -->
-                <input type="text" placeholder="Nome">
-                <input type="text" placeholder="Sobrenome">
-                <input type="text" placeholder="Escola">
-                <input type="text" placeholder="Cidade">
-                <button id="">Cadastrar</button>
-                <button id="back-to-login">Voltar</button>
-            </div>
-      
-        </section>
-    </main>
-
-    <footer>
-        <p class="copyright"><a href="https://github.com/alves-a/BeLpaint">repository BeLpaint - 2025</a></p>
-        <p class="copyright"><a href="https://github.com/alves-a">created by Afonso Alves</a></p>
-        <p class="copyright"><a href="mailto:belpaint.contato@gmail.com">belpaint.contato@gmail.com</a></p>
-    </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <script src="/src/script/sketch.js"></script>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const mainMenu = document.getElementById('main-menu');
-        const loginForm = document.getElementById('login-form');
-        const registerForm = document.getElementById('register-form');
-
-        const loginButton = document.getElementById('login-button');
-        const backToMenuButton = document.getElementById('back-to-menu');
-        const backToLoginButton = document.getElementById('back-to-login');
-        const goToRegisterButton = document.getElementById('go-to-register');
-
-        loginButton.addEventListener('click', () => {
-            mainMenu.style.display = 'none'; // Esconde o menu
-            loginForm.style.display = 'block'; // Mostra o formulário de login
-        });
-
-        backToMenuButton.addEventListener('click', () => {
-            loginForm.style.display = 'none'; // Esconde o formulário de login
-            mainMenu.style.display = 'block'; // Mostra o menu
-        });
-
-        goToRegisterButton.addEventListener('click', () => {
-            loginForm.style.display = 'none'; // Esconde o formulário de login
-            registerForm.style.display = 'block'; // Mostra o formulário de registro
-        });
-
-        backToLoginButton.addEventListener('click', () => {
-            registerForm.style.display = 'none'; // Esconde o formulário de registro
-            loginForm.style.display = 'block'; // Mostra o o formulário de login
-        });
-    });
-</script>
 </html>
-
-
